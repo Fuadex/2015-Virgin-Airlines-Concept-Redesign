@@ -1,0 +1,862 @@
+<!doctype html>
+
+<!-- !!!!!!!!!!!!!!!!!!!!!!!! READ ME !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+
+
+
+
+
+        1. Intro
+
+      At first I started creating the website using multiple programs and themes
+     To start off I took a look at bootstrap themes and decided to see if Adobe
+     Dreamweaver could be of any use. At some point I decided to drop ball on a
+     standard program and stuck with brackets (for the server feature embedded)
+     and Sublime Text 2 for the actual coding and all
+
+     Most of the code relies on html, css and bootstrap styling, however I also
+     used more advanced code, usually realying on pre-searched code on a website
+     called stackoverflow, so there will be occasional javascript and jquery
+     implementations, perhaps JSON, but nothing more than rather that I presume
+
+      Unfortunately facebook API and google API kind of bares from using their
+      code and information, unless I introduced a specific webiste address
+
+      For the time of development I used localhost:port, for which port dynamically
+      changed and had to introduce adjacent calibrations within the facebook and
+      google apps I made for the autofill forms
+
+      I presume these codes won't work, as they require a server (for the localhost sake)
+      It will however work on a FTP I uploaded the site to, which you may access at the following:
+
+        2. ACTUAL FTP WEBSITE
+
+              http://fuadex.cba.pl
+
+      The website will feature ads, but you may enter it using any web browser or mobile device
+      So far it worked well on number of devices and displays, hopefully I'm not the only one and
+      the website will work well on your side as well
+
+        3. Iteration
+
+      I submitted mockups which included a general page, information page and join page and login page
+
+      However, as the task required students to create a join page with a bit of information which would
+      convice the unconvinced people, I decided to focus on the actual task presented to the students
+
+      Furthermore I also decided to create a unified website, so there would be no juggling between sites
+      with the sole exception of Terms and Conditions hotlink
+
+      In case of the design features, the style is more or less the same as on the join page I submitted
+      on the delivered mockups for assignment nr. 2, however I noticeably changed the style for instance:
+      - Instead of handsketched planes and background, dominant in red colors I introduced a photo of skies
+      seen from an airplane, to calm the audience and also give an idea of what it is to be flying somewhere
+      - As I aforementioned, I integrated the information page with the join page, which will reveal itself
+      provided the user will press the button 'Still Unconvinced?'
+      - I also changed the positioning of some buttons, but it's merely a great change, especially that the
+      design part and features in my opinion exponentially has improved compared to the mockups.
+      - Also the entire design is responsive, with most of the features adjusting accordingly to users actions
+      and/or devices the potential user might decide to take control of and enter (velocity joinpage website)
+
+      4. Thanks for reading and hopefully you'll enjoy using this page as much as I did!
+
+      5. PS: I used a couple of graphics not owned by me, however I left meta data in them, just in case
+
+      Cheers!
+      -->
+
+<html class="en">
+
+<head>
+
+<meta charset="utf-8">
+
+<!-- Standard meta data stuff-->
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<meta name="description" content="Velocity Frequent Flyer Program">
+
+<meta name="keywords" content="Velocity Frequent Flyer">
+
+<meta name="author" content="Velocity">
+
+<title>Velocity Frequent Flyer Program</title>
+
+<!--Neccessary files for the styling and such-->
+
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+
+<link href="portfolioResponsive.css" rel="stylesheet" type="text/css">
+
+<link href="portfolioStyle.css" rel="stylesheet" type="text/css">
+
+<!-- Bunch of css styles
+
+  I styled regular html formulas sometimes just as frequently as
+  the id's and classes, in some cases I introduced quite interesting
+  bits of code as well for instance:
+
+  - transition easing
+  - dynamic font scaling
+  - background-image positioning as cover
+-->
+
+<style type="text/css">
+
+#hidden_content{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.8s ease;
+}
+
+body {
+	background-image: url(clouds.jpg);
+	background-repeat:no-repeat;
+background-size:auto;
+background-position:center;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-family: montserrat, sans-serif;
+}
+
+.Velo {
+  max-height:50px;
+  margin-top:30px;
+  margin-bottom:30px;
+}
+
+.Wooow {
+  text-align:center;
+  color:#000000;
+}
+
+#dupa {
+ margin:20px;
+}
+
+#dupa1 {
+  margin-top:20px;
+  margin-bottom:30px;
+}
+
+#dupa2 {
+  margin-top:20px;
+  margin-bottom:10px;
+}
+
+.mutantish {
+  font-size: 5vmin;
+}
+
+a:visited{
+  color:white;
+}
+a:link{
+  color:white;
+}
+a:hover{
+  color:lightgray;
+  text-decoration:none;
+}
+
+.img1a {
+  background-image: url(vir_reward_seat_awareness.jpg);
+  background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-position:center;
+width:30%;
+overflow:auto;
+}
+
+.img1b {
+  background-image: url(earn_vel_tieredpointsdevice_5p.gif);
+  background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-position:center;
+width:30%;
+overflow:auto;
+}
+
+.img1c {
+  background-image: url(bp-banner-earn-fuel.jpg);
+  background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-position:center;
+width:30%;
+overflow:auto;
+}
+
+.img1d {
+background-image: url(520x220_castaway.jpg);
+background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-position:center;
+width:30%;
+overflow:auto;
+}
+
+.img1e {
+background-image: url(520x184_vel_jetpets_landing.jpg);
+background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-position:center;
+width:30%;
+overflow:auto;
+}
+
+.img1f {
+background-image: url(548x230_global-wallet.jpg);
+background-repeat:no-repeat;
+-webkit-background-size:cover;
+-moz-background-size:cover;
+-o-background-size:cover;
+background-position:center;
+width:30%;
+overflow:auto;
+}
+
+.table{
+max-height:600px;
+min-width:600px;
+overflow:auto;
+}
+
+#looolz{
+  padding:10px;
+}
+
+.righto{
+  margin:zero;
+  padding:zero;
+}
+
+</style>
+
+  <script>var __adobewebfontsappname__="dreamweaver"</script> <!--I decided to stick with a rather unknown but great font delivered with Dreamweaver-->
+  <script src="http://use.edgefonts.net/montserrat:n4:default;alice:n4:default.js" type="text/javascript"></script>
+
+<!--Jquery library, safer on disk rather than as if I connected through the net to get it-->
+
+<script src="jquery-2.1.4.min.js"></script>
+</head>
+
+<!--And here we go with the body!
+
+  First part will be the crucial facebook scripts, which will partially fulfill the forms
+
+There's a lot of stuff going on here, but it should be relatively forthcoming to see though it-->
+
+<body>
+
+<div id="top"></div>
+
+<!--Google API commences-->
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDx9NVrrTJycZIKxV3at0FtYX2ZW881zns&libraries=places"></script>
+
+<!--Personally I don't know what is this. Crucial facebook API, so the following scripts work, couldn't change anything I presume-->
+
+  <script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '1175644965784133',
+      xfbml      : true,
+      version    : 'v2.5'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en_US/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<!-- This little fella will make sure the site is nice and compact-->
+
+<div class="gridContainer clearfix"> 
+
+<!-- First real part of the site begins here
+
+    I introduced forms, by relying on the grid system bootstrap has introduced
+    I stacked the content and made sure it would works well
+    At first a system of x3, with horizontal text and forms
+    Then a system of x3 with text over the forms
+    And when the system hits an appropriate treshold, it becomes x1,
+    with text and forms one over another.
+
+    It took me a while to figure this out, as a lot of errors came up underway
+    Eventually everything seems to work quite well-->
+
+  <article class="fluid gallery"> <!--Better text exposure-->
+  <img src="2000px-Velocity_Frequent_Flyer_logo.svg.png" class="Velo col-lg-1">
+  <h2 class="Wooow mutantish col-lg-7" id="dupa">You're almost aboard!</h2> <!--This text is responsive (scalable)-->
+      <button onclick="prefillForm()" id="dupa" class="btn-lg btn-primary col-lg-3">Prefill with Facebook</button> <!--This button will launch facebook integration-->
+       <!--For more information, take a look at the following captions-->
+</article>
+
+  <article class="fluid gallery">
+    <figure class="col-sm-4 righto"> <!--righto will make more space for the article-->
+
+<!--First column of the grid system-
+I decided to use the col-lg system as it best fits the style-->
+
+ <form class="form-horizontal" role="form">
+      <div class="form-group"> <!--form group makes space between the form inputs-->
+    <label class="control-label col-lg-4" for="Title">Title:</label> <!--Control-label makes the text somehow nicely attached to the form-->
+    <div class="col-lg-8">
+<select class="form-control" id="Title">
+      <option>Mr</option>
+      <option>Mstr</option>
+      <option>Mrs</option>
+      <option>Ms</option>
+      <option>Miss</option>
+      <option>Dr</option>
+      </select>
+          </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-lg-5" for="First_Name">First Name(s):</label>
+    <div class="col-lg-7">
+      <input type="text" class="form-control" id="First_Name" placeholder="Enter First Name(s) (as in passport)">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-lg-5" for="Last_Name">Last Name:</label>
+    <div class="col-lg-7">
+      <input type="text" class="form-control" id="Last_Name" placeholder="Enter Last Name (as in passport)">
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="control-label col-lg-4" for="Mobile">Mobile:</label>
+    <div class="col-lg-8">
+      <input type="tel" class="form-control" id="Mobile" placeholder="Enter Mobile">
+    </div>
+  </div>
+    <div class="form-group">
+    <label class="control-label col-lg-4" for="E-mail">E-mail:</label>
+    <div class="col-lg-8">
+      <input type="email" class="form-control" id="E-mail" placeholder="Enter E-mail">
+    </div>
+  </div>
+</form>
+      <figcaption class="textStyle"></figcaption>
+    </figure>
+    
+
+
+<!--Second column of the grid system
+
+Somehow I couldn't print facebook birthday to Date of Birth form
+However the form itself works quite well, especially on mobile devices!-->
+
+
+
+    <figure class="col-sm-4 righto">
+
+       <form class="form-horizontal" role="form">
+      <div class="form-group">
+    <label class="control-label col-lg-4" for="Country">Date of Birth:</label>
+    <div class="col-lg-8">
+<input type="datetime-local" class="form-control" id="datetime">
+</div>
+</div>
+          <div class="form-group">
+    <label class="control-label col-lg-4" for="Password">Password:</label>
+    <div class="col-lg-8">
+      <input type="password" class="form-control" id="Password" name="Pass" placeholder="Enter Password">
+    </div>
+  </div>
+
+            <div class="form-group">
+    <label class="control-label col-lg-4" for="Question">Question:</label>
+    <div class="col-lg-8">
+      <input type="text" class="form-control" id="Question" placeholder="Enter Security Question">
+    </div>
+  </div>
+              <div class="form-group">
+    <label class="control-label col-lg-4" for="Answer">Answer:</label>
+    <div class="col-lg-8">
+      <input type="text" class="form-control" id="Answer" placeholder="Enter Security Answer">
+    </div>
+  </div>
+
+              <div class="form-group">
+    <label class="control-label col-lg-4" for="Location Google">Address:</label>
+    <div class="col-lg-8">
+<input type="text" class="form-control" id="searchTextField" placeholder="Enter Address (Google Maps)">
+    </div>
+  </div>
+
+  </form>
+
+    
+      <figcaption class="textStyle"></figcaption>
+    </figure>
+
+
+  <!--Third column of the grid system
+  righto class fixes a weird grid issue, making render a notch too much to the left-->
+
+
+
+<figure class="col-sm-4 righto">
+ <form class="form-horizontal" role="form">
+      <div class="form-group">
+    <label class="control-label col-lg-4" for="Country">Country:</label>
+    <div class="col-lg-8">
+<select class="form-control" id="Country">
+      <option>Australia</option>
+      <option>Christmas Island</option>
+      <option>Cocos Islands</option>
+      <option>Cook Island</option>
+      <option>Fiji</option>
+      <option>New Zeland</option>
+      <option>Papua New Guinea</option>
+      <option>Samoa</option>
+      <option>Solomon Islands</option>
+      <option>Tonga</option>
+      <option>Vanuatu</option>
+      </select>
+    </div>
+  </div>
+
+      <div class="form-group">
+    <label class="control-label col-lg-4" for="Address_Line">Address:</label>
+    <div class="col-lg-8">
+      <input type="text" class="form-control" id="Address_Line" placeholder="Enter Address">
+    </div>
+  </div>
+        <div class="form-group">
+    <label class="control-label col-lg-4" for="Suburb_City">Suburb/City:</label>
+    <div class="col-lg-8">
+      <input type="text" class="form-control" id="Suburb_City" placeholder="Enter Suburb/City">
+    </div>
+  </div>
+
+          <div class="form-group">
+    <label class="control-label col-lg-4" for="Postcode">Postcode:</label>
+    <div class="col-lg-8">
+      <input type="tel" class="form-control" id="Postcode" placeholder="Enter Postcode"> <!--tel input type will change smartphone keyboard to numeric-->
+    </div>
+  </div>
+
+        <div class="form-group">
+    <label class="control-label col-lg-4" for="State">State:</label>
+    <div class="col-lg-8">
+<select class="form-control" id="State">
+      <option>ACT</option>
+      <option>NSW</option>
+      <option>NT</option>
+      <option>QLD</option>
+      <option>SA</option>
+      <option>TAS</option>
+      <option>VIC</option>
+      <option>WA</option>
+      </select>
+    </div>
+  </div>
+
+      <figcaption class="textStyle"></figcaption>
+    </figure>
+
+  </form>
+
+  </article>
+  
+<!--Prefill with facebook option is one of the most interesting options
+Unfortunately it only fills up 5 windows, not very well at the same time
+I decided to leave the button as it boosts the page's prestige, even if it might seem useless
+People who come across it will definitely take notion of it, further boosting the potential client's interest
+
+I was willing to introduce LinkedIn and Google+ prefill buttons as well however:
+- Apparently LinkedIn requires a special account, worth around 25000$ per 3 months
+- Apparently Google+ shares its API only for specific clients, unfortunately
+
+I still included at some point the LinkedIn script, for the potential company's use--> 
+
+  
+<!--Second major row starts here
+
+Not much going on though, as I reshuffled the form structure
+I decided that asking double for writing in Email or Password is pointless
+Also additional BP Card or Velocity Promitional Codes might not be within reach for some potential customers
+In order to not undermine them, I reshuffled the whole structure, should be more logical now-->
+
+  <section class="fluid gallery">
+
+<div class="form-horizontal" role="form">
+  <div class="row">
+    <div class="col-md-6">
+      <h2 class="fluid secondaryHeading headingStyle Wooow" id="dupa1">Promotional</h2>
+
+      <p class="contentArea Wooow">
+        <div class="form-group">
+        <label class="control-label col-md-5">
+          <b>Velocity Promo: </b></label>
+          <div class="col-md-7">
+          <input type="text" class="form-control" name="promo" placeholder="Velocity Promo Code"> <!--placeholders are a nice addition to the forms-->
+        </div>
+      </div>
+        
+        <div class="form-group">
+        <label class="control-label col-md-5">
+      <b>BP Card Number:</b></label>
+      <div class="col-md-7">
+      <input type="text" class="form-control" name="BP" placeholder="BP Temporary Card Number">
+    </p>
+    </div>
+    </div>
+  </div>
+
+  <!-- Second Row
+       Second Column
+
+       Starts right here
+
+Not much going on here as well, just the terms and conditions sphere
+Also the Sign Up button, which is interesting in its own way
+
+Terms and Conditions will take the user to velocity page-->
+
+
+        <div class="col-md-6">
+          <h2 class="fluid secondaryHeading headingStyle Wooow" id="dupa2">Terms & Conditions</h2>
+      
+<div class="form-group">
+      <p class="contentArea Wooow">
+        <label class="control-label"><input type="checkbox" id="validat"> I agree to the <u><a href="http://www.velocityfrequentflyer.com/content/TermsConditions/" target="blank">Terms & Conditions</a></u> <!--The checkbox will be printed as well!-->
+      </label>
+      <form>
+      <button type="submit" class="btn-lg btn-primary">Sign Up</button> <!-- Take a look at the console, all the form information will be printed there, if triggered-->
+    </form>
+    </p>
+</div>
+</div>
+</section> <!--Section is basically almost the same as article-->
+
+<!--Key part of the project is to convince new people to joining the program
+  However as the research part suggested, only a parts of all the people joining the program
+  Actually had to get convinced into joining it
+
+  In such case I created a unified site, with the main focus on the form part
+  However there is a peculiar button right at the bottom of the page, for the people still not yet convinced
+
+  In such case, I introduced two, neatly combined codes in jquery
+  The site will go eased into new content, presenting the highlights of Velocity Frequent Flyer Program
+
+  I relied on stackoverflow website, more information will be provided in following captions-->
+
+<a href="#test"> <!--Comunicates with id 'test'-->
+  <button id="button" class="btn btn-primary btn-block">Still Unconvinced?</button> <!-- A whole button block will definitely draw attention-->
+</a>
+<p>
+
+<!--The following content will stay hidden until the user requests it to unfold (the button above)-->
+
+<div id="hidden_content">
+  <div id="test"></div> <!--Even though it's named test, it's hardly a test-->
+
+  <center>
+<h2 class="Wooow mutantish" id="dupa1">Velocity is for free!</h2> <!--Responsive size-->
+</center>
+
+<div class="table-responsive"> <!--Responsive tables for mobile devices, bootstrap feature-->
+<table class="table" border="1">
+<tbody>
+<tr>
+<th class="img1a">
+</th>
+<th>
+See more of the world for less with Velocity and use your Points to fly to over 600 destinations. Voted Best Redemption Ability at the 2015 Freddie Awards and with the best Reward Seat availability out of all Asia Pacific region programs, using your Points to get the seat you actually want is easy with Velocity.
+</th>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<table class="table" border="1">
+<tbody>
+<tr>
+<th class="img1b">
+</th>
+<th>
+Travel with Virgin Australia and our world-class airline partners and be rewarded with more than an outstanding journey. As a Velocity member, you can earn Points to over 600 destinations worldwide.
+</th>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<table class="table" border="1">
+<tbody>
+<tr>
+<th class="img1c">
+</th>
+<th class>
+Thanks to an exciting new partnership between BP and Velocity Frequent Flyer, you can now earn 2 Velocity Frequent Flyer Points for every litre of fuel purchased up to 150 litres of fuel and 2 Velocity Points for every dollar in-store up to $100, per transaction at participating BP service stations. It’s as simple as swiping a Velocity membership card before you pay, with no minimum spend required.
+</th>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<table class="table" border="1">
+<tbody>
+<tr>
+<th class="img1d">
+</th>
+<th class>
+Like shopping? Why not redeem your Points on hundreds of products via the Velocity Rewards Store. Whether it’s a gift card, iPad, TV or camera, there are plenty of options to choose from. Many items are also available for redemption using a combination of Points plus Pay.
+</th>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<table class="table" border="1">
+<tbody>
+<tr>
+<th class="img1e">
+</th>
+<th class>
+We know pets are part of the family and that’s why we are the only Australian frequent flyer program that allows you to earn Points in one of two simple ways when your cat or dog flies with Virgin Australia. When travelling with a cat or dog on a Virgin Australia domestic flight, you will earn a minimum of 300 Points per pet carrier for each flight sector flown.
+</th>
+</tr>
+
+</tbody>
+</table>
+
+
+
+<table class="table" border="1">
+<tbody>
+<tr>
+<th class="img1f">
+</th>
+<th class>
+Global Wallet® is as a Visa Prepaid travel card, which allows you to load money and store it in multiple foreign currencies. You can then use it to make ATM withdrawals around the world, plus earn Velocity Points on your purchases. Global Wallet® rewards your in-store and online purchases with 1 Point per $1 spent on international transactions, and 1 Point per $2 spent for transactions made within Australia.
+</th>
+</tr>
+
+</tbody>
+</table>
+
+
+
+</div> <!-- Uff!-->
+
+
+<a href="#top"> <!--This button will ease up to the top of the page, to the user's convenience (especially mobile ones)-->
+  <button class="btn btn-success btn-block">Back To Form</button>
+  </a>
+</div>
+<p>
+</div> <!--End of hidden div-->
+
+
+<!--This is The End My Friend!
+
+  Anyway, that's all, almost all, underneath you'll find more jquery stuff-->
+
+</div>
+
+<!--
+This code will corelate with code using <a href="#Something"> and <(...) id="something">
+Code will corelate and move beyond each other
+
+I found the code on the following site:
+http://stackoverflow.com/questions/17130028/how-i-can-scroll-page-down-up-with-animation-in-html
+It's further explained over here:
+http://jsfiddle.net/gHS6b/
+
+That wasn't enough, so I decided to look for more way of constructing the website
+ -->
+
+<script>
+$(document).ready(function(){
+    $('a[href^="#"]').click(function(e) {
+        e.preventDefault();
+        var target = this.hash, $target = $(target);
+        $('html, body').stop().animate({
+            'scrollTop': $target.offset().top
+        }, 900, 'swing', function() {
+            window.location.hash = target;
+        });
+    });
+});
+</script>
+
+<!-- This code will toggle content on and off
+  The material supposed to convince the users will remain off, unless requested to be seen
+
+  It's possible to toggle on and off the hidden part
+  Also the name of the button will change, each time toggled
+
+  I found the script here:
+
+  http://jsfiddle.net/dRpWv/665/
+
+  I personally managed to combine two easing scripts, the one above and the one underneath
+  They work perfectly well-->
+
+<script>
+document.getElementById('button').onclick = function() {
+    this.__toggle = !this.__toggle;
+    var target = document.getElementById('hidden_content');
+    if( this.__toggle) {
+        target.style.height = target.scrollHeight+"px";
+        this.firstChild.nodeValue = "Hide content";
+    }
+    else {
+        target.style.height = 0;
+        this.firstChild.nodeValue = "Still Unconvinced?";
+    }
+}
+</script>
+
+<!-- Even though I couldn't get Google+ API and LinkedIn thingy seems to be off
+  I used one of the tutorial tricks to fill some forms using google maps API
+  It turns out it has quite vast powers and so I used the location thingy to
+  fill most of the location forms to an extent which I'm really happy about
+
+  I had to tweak the code, though as it was difficult to use at this point
+  In order to use the code shouted to the console.log I had to provide the
+  code with upgrades, also I used Arrays available in the data I withdrew
+
+  The Google Maps API was constructed based on one of the unit's tutorials
+-->
+
+<script type="text/javascript">
+function initialize() {
+  var input = document.getElementById('searchTextField');
+  var options = {componentRestrictions: {country:'au'}};
+  var autocomplete = new google.maps.places.Autocomplete(input,options);
+  autocomplete.addListener("place_changed", function() {
+    var place = autocomplete.getPlace();
+    console.log(place);
+    $('#Country').val(place.address_components[4].long_name)
+    $('#Address_Line').val(place.name)
+    $('#Suburb_City').val(place.address_components[2].long_name)
+    $('#Postcode').val(place.address_components[5].short_name)
+    $('#State').val(place.address_components[3].short_name)
+  })
+}
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+<!--Facebook form script
+  This script is for the facebook integration, it will get the name, e-mail, date and location
+  I used it as part of the Web tutorial
+
+Unfortunately birthday feature seems to not work exactly as it's supposed to and I do not really know why
+Rest works perfectly well-->
+
+<script>
+function prefillForm(){
+FB.login(function(){
+FB.api('/me',{fields:'first_name,last_name,email,birthday,location'},
+function(response){
+console.log(response);
+$('#First_Name').val(response.first_name);
+$('#Last_Name').val(response.last_name);
+$('#E-mail').val(response.email);
+$('#datetime').val(response.birthday);
+$('#Address_Line').val(response.location.name);
+}
+);
+},{scope:'user_about_me,email,user_birthday,user_location'});
+}
+</script>
+
+<!--It took me a long while to crack this thing open
+  I intended to use a code, serialize form (serialize array), which would grab all the date available
+  However it kept failing to launch, so I kept on looking for something more neat
+I came up with a solution as I got all the information singularily
+Also this code is quite flexible, so I could get any information I wanted
+
+After you press the submit button, the information will get printed in the console.log
+
+Also If the checkbox remains unchecked in the 'I agree to terms and conditions' part,
+the printed checkbox value will stay 'unknown', if it's checked it will be 'on'
+Jquery is really a good thing to exist!
+-->
+
+
+<script>
+
+$('form').submit(printObj);
+
+function printObj(e) {
+  e.preventDefault();
+  var obj = {
+    Title: $('select[id=Title]').val(),
+    First_Name: $('input[id=First_Name]').val(),
+    Last_Name: $('input[id=Last_Name]').val(),
+    EMail: $('input[id=E-mail]').val(),
+    Mobile: $('input[id=Mobile]').val(),
+    Postcode: $('input[id=Postcode]').val(),
+    Country: $('select[id=Country]').val(),
+    Address: $('input[id=Address_Line]').val(),
+    Suburb_City: $('input[id=Suburb_City]').val(),
+    Postcode: $('input[id=Postcode]').val(),
+    State: $('select[id=State]').val(),
+    Birthday: $('input[id=datetime]').val(),
+    Password: $('select[id=Pass]').val(),
+    Question: $('input[id=Question]').val(),
+    Answer: $('input[id=Answer]').val(),
+    Promo: $('input[name=promo]').val(),
+    BP: $('input[name=BP]').val(),
+    Agree: $('input[id=validat]:checked').val(),
+
+
+  }
+  console.log(obj);
+}
+</script>
+
+<!-- LinkedIn form script
+  I wanted to integrate a LinkedIn form filler, as it seemed an interesting idea
+  Furthermore once integrated, it would be able to fill most of the presented form!
+  At greater extent than the facebook one available
+
+  Unfortunately for the privilage of using it, I'd have to subscribe for a program worth 25000$ per 3 months
+  It probably wouldn't be much of an expenditure for Virgin and Velocity program, however my student budget is quite reasonably tight
+  However, just in case, I featured the code which is available underneath-->
+
+<script src="//platform.linkedin.com/in.js" type="text/javascript">
+  api_key: 75x1y1t5wxydp7
+  noAuth: true
+  lang: en_US
+</script>
+<script type="IN/Form" data-form="linked" data-field-firstname="First_Name" data-field-lastname="Last_Name" data-field-phone="Mobile" data-field-email="E-mail" data-field-title="Title" data-field-city="Suburb_City" data-field-state="State" data-field-country="Country" data-field-zip="Postcode"></script>
+
+</body>
+</html>
+

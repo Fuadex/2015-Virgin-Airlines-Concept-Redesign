@@ -1,0 +1,73 @@
+!!!READ ME!!!
+
+Welcome to Velocity Frequent Flyer Webpage
+
+If you'd like to see Google API and Facebook API working,
+please take a look at the uploaded join page:
+
+http://fuadex.cba.pl
+
+Also, after hitting Sign Up, the information from the forms...
+
+       ...WILL BE PRINTED!...
+
+... in the console.log
+
+Cheers!
+
+
+Index.html welcoming captions:
+
+        1. Intro
+
+      At first I started creating the website using multiple programs and themes
+     To start off I took a look at bootstrap themes and decided to see if Adobe
+     Dreamweaver could be of any use. At some point I decided to drop ball on a
+     standard program and stuck with brackets (for the server feature embedded)
+     and Sublime Text 2 for the actual coding and all
+
+     Most of the code relies on html, css and bootstrap styling, however I also
+     used more advanced code, usually realying on pre-searched code on a website
+     called stackoverflow, so there will be occasional javascript and jquery
+     implementations, perhaps JSON, but nothing more than rather that I presume
+
+      Unfortunately facebook API and google API kind of bares from using their
+      code and information, unless I introduced a specific webiste address
+
+      For the time of development I used localhost:port, for which port dynamically
+      changed and had to introduce adjacent calibrations within the facebook and
+      google apps I made for the autofill forms
+
+      I presume these codes won't work, as they require a server (for the localhost sake)
+      It will however work on a FTP I uploaded the site to, which you may access at the following:
+
+        2. ACTUAL FTP WEBSITE
+
+              http://fuadex.cba.pl
+
+      The website will feature ads, but you may enter it using any web browser or mobile device
+      So far it worked well on number of devices and displays, hopefully I'm not the only one and
+      the website will work well on your side as well
+
+        3. Iteration
+
+      I submitted mockups which included a general page, information page and join page and login page
+
+      However, as the task required students to create a join page with a bit of information which would
+      convice the unconvinced people, I decided to focus on the actual task presented to the students
+
+      Furthermore I also decided to create a unified website, so there would be no juggling between sites
+      with the sole exception of Terms and Conditions hotlink
+
+      In case of the design features, the style is more or less the same as on the join page I submitted
+      on the delivered mockups for assignment nr. 2, however I noticeably changed the style for instance:
+      - Instead of handsketched planes and background, dominant in red colors I introduced a photo of skies
+      seen from an airplane, to calm the audience and also give an idea of what it is to be flying somewhere
+      - As I aforementioned, I integrated the information page with the join page, which will reveal itself
+      provided the user will press the button 'Still Unconvinced?'
+      - I also changed the positioning of some buttons, but it's merely a great change, especially that the
+      design part and features in my opinion exponentially has improved compared to the mockups.
+      - Also the entire design is responsive, with most of the features adjusting accordingly to users actions
+      and/or devices the potential user might decide to take control of and enter (velocity joinpage website)
+
+      4. Thanks for reading and hopefully you'll enjoy using this page as much as I did!
